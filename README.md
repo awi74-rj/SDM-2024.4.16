@@ -52,7 +52,34 @@ DB_PASSWORD=
 
 Genera una clave de aplicación:php artisan key:generate
 
+Asegúrate de que MySQL esté instalado y en ejecución.
 
+
+
+Crea una base de datos para el proyecto:
+
+CREATE DATABASE my_crud;
+
+
+Ejecuta las migraciones para crear las tablas necesarias:
+
+php artisan migrate
+
+
+(Opcional) Si deseas cargar datos de prueba, importa el archivo de respaldo database/backups/empleados_backup.sql:
+
+Si estás usando la terminal:
+
+mysql -u tu_usuario -p my_crud < database/backups/empleados_backup.sql
+
+O usa phpMyAdmin:
+
+
+Abre phpMyAdmin y selecciona la base de datos my_crud.
+
+Ve a la pestaña "Importar".
+
+Selecciona el archivo database/backups/empleados_backup.sql y haz clic en "Go".
 
 
 Ejecutar migraciones:
