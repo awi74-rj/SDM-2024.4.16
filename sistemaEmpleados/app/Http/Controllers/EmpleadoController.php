@@ -14,7 +14,7 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $datos['empleados']=Empleado::paginate(10); //10 primeros registros de empleados
+        $datos['empleados']=Empleado::paginate();
         return view('empleado.index', $datos);
     }
 
@@ -62,8 +62,6 @@ class EmpleadoController extends Controller
 
         //return response()->json($datosEmpleado);
         return redirect('empleado')->with('mensaje', 'Empleado agregado con exito');
-        //return redirect()->route('empleado')->with('mensaje', 'Empleado agregado con exito');
-
     }
 
     /**
@@ -78,8 +76,7 @@ class EmpleadoController extends Controller
      */
     public function edit($id)
     {
-        $empleado=Empleado::findOrfail($id);//se toma el id en la url
-
+        $empleado=Empleado::findOrfail($id);
         return view('empleado.edit', compact('empleado'));
     }
 

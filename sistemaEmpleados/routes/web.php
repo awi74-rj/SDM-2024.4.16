@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 /**/
 Route::resource('empleado', EmpleadoController::class)->middleware('auth');
-Auth::routes(['register'=>false, 'reset'=>false]);
+Auth::routes();
 
 Route::get('/home', [EmpleadoController::class, 'index'])->name('home');
 

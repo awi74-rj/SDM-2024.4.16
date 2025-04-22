@@ -2,23 +2,14 @@
 @section('content')
 
 <div class="container">
-
+    @if(Session::has('mensaje'))
     <div class="alert alert-success alert-dismissible" role="alert">
-        @if(Session::has('mensaje'))
-                {{ Session::get('mensaje') }}
-
-        @endif
-
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+         {{ Session::get('mensaje') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+    @endif
 
     
-
-
-    
-
     <a href="{{ url('empleado/create') }}" class="btn btn-success"> Registrar nuevo empleado </a>
     <br>
     <br>
@@ -68,5 +59,9 @@
             @endforeach
         </tbody>
     </table>
+    <div class="d-flex justify-content-center">
+        
+    </div>
+
 </div>
 @endsection

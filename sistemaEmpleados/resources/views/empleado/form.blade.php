@@ -17,12 +17,12 @@
     </div>
 
     <div class="from-group">
-        <label for="apellido_paterno"> Apellido 1: </label>
+        <label for="apellido_paterno"> Apellido Paterno: </label>
             <input type="text" class="form-control" name="apellido_paterno" value="{{isset($empleado->apellido_paterno)?$empleado->apellido_paterno:old('apellido_paterno') }}" id="apellido_paterno">
     </div>
 
     <div class="from-group">
-        <label for="apellido_materno"> Apellido 2: </label>
+        <label for="apellido_materno"> Apellido Materno: </label>
             <input type="text" class="form-control" name="apellido_materno" value="{{ isset($empleado->apellido_materno)?$empleado->apellido_materno:old('apellido_materno') }}" id="apellido_materno">
     </div>
 
