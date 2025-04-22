@@ -23,7 +23,7 @@ MySQL o cualquier base de datos compatible con Laravel
 Instalación
 
 Clonar el repositorio:
-git clone https://github.com/tu-usuario/my-crud.git
+git clone 
 cd my-crud
 
 
@@ -41,12 +41,13 @@ Configurar el archivo .env:
 Copia el archivo .env.example a .env:cp .env.example .env
 
 
-Configura las credenciales de tu base de datos en .env:DB_CONNECTION=mysql
+Configura las credenciales de tu base de datos en .env:
+DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=my_crud
-DB_USERNAME=tu_usuario
-DB_PASSWORD=tu_contraseña
+DB_DATABASE=sistemaEmpleados
+DB_USERNAME=root
+DB_PASSWORD=
 
 
 Genera una clave de aplicación:php artisan key:generate
